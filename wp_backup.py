@@ -1,27 +1,31 @@
 """
-121Domains is a trading name of 121 Digital Services Limited
+WP Remote FTP Backup
 
-@category    Domains
-@package     121 Digital Core
-@subpackage  121 Domain Name Manager
+@category    Backup Solutions
+@package     WP Remote FTP Backup
+@subpackage  WordPress Backup Manager
+@license     GPLv2 <https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html>
 @author      James Gibbons <jgibbons@121digital.co.uk>
-@license     https://www.121digital.co.uk/license 121 Digital Software License
 @link        https://www.121digital.co.uk
 
-Disclaimer: This source code and its comments are the intellectual property
-of 121Domains, a trading name of 121 Digital Services Limited. It may not be used, modified,
-or distributed without explicit permission from 121Domains, a trading name of 121 Digital Services Limited.
+121Domains is a trading name of 121 Digital Services Limited.
+
+Disclaimer: This source code and its comments are the intellectual property of 121Domains, 
+a trading name of 121 Digital Services Limited. It is free to use, modify, and distribute under the terms 
+of the GNU General Public License version 2 (GPLv2).
 
 Description:
-This script automates the deployment process for 121 Digital Core API. It performs the following tasks:
-1. Stops the Nginx service to prevent disruptions during deployment.
-2. Clones the 121 Digital Core API repository from GitHub. If the target directory already exists, it is deleted before cloning.
-3. Copies the cloned repository's contents to the designated web directory with progress tracking.
-4. Copies a specified configuration file to the appropriate location in the web directory, overwriting any existing file.
-5. Restarts the Nginx service to apply the updates.
-6. Logs all actions to both the console and a log file for auditing and troubleshooting purposes.
+WP Remote FTP Backup is an open-source project created by 121 Digital Services Limited. 
+This Python script automates the backup process for WordPress websites. It performs the following tasks:
 
-This script is intended for use in environments where 121 Digital Core API updates are deployed and needs to be executed with the appropriate permissions.
+1. Backs up the WordPress site files and MySQL database.
+2. Compresses the backup into a zip file.
+3. Stores the backup locally, with an option to delete the previous day's backup.
+4. Uploads the backup to a remote FTP server.
+5. Manages old backups on the FTP server, retaining only the most recent backups based on the configurable retention policy.
+6. Logs all actions to a log file for auditing and troubleshooting purposes.
+
+This script is intended for use by WordPress site administrators who need an automated, reliable backup solution with remote storage capabilities.
 """
 
 import os
