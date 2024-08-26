@@ -8,6 +8,12 @@ This Python script automates the backup of a WordPress website and its associate
 - Uploads the backup to a remote FTP server.
 - Manages old backups on the FTP server, retaining only the most recent backups as per configuration.
 
+## Project Background
+Part of this project originates from an internal solution to backup staging websites on developer machines but may see some use in a production environment in the future of 121 Digital's website design platform.
+
+## Notice
+This open source branch of the project may not be actively maintained and will often be downstream of our internal solution given the sensetive nature of our backup infastructure; This project is intended for educational purposes and is not provided as a turn-key solution.
+
 ## Features
 
 - **Local Backup Management:** Automatically deletes the previous day's backup, ensuring only the latest backup is stored locally.
